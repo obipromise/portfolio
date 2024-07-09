@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <title>Obi Promise</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -30%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary rounded-2" tabindex="0">
+
+
+<style>
+
+
+
+    .navigation{
+        background-color: #F58529;
+    }
+
+    li{
+        font-weight: bold;
+    }
+
+    .btn{
+        border-radius: 1.1rem;
+        text-align: center;
+    }
+
+    .instagram-button {
+      font-size: 16px;
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #F58529);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    .projectBtn{
+        background-color: #F58529;
+        height: 2rem;
+        border-radius: 5rem;
+        border: none;
+        padding: 0.8rem;
+    }
+
+    .projectBtn:hover{
+      height: 2rem;
+      border-radius: 5rem;
+      border: none;
+      background-color: black;
+      color: #F58529;
+    }
+
+    .projectLink{
+        text-decoration: none;
+        color: black;
+    }
+
+    .projectLink:hover{
+      text-decoration: none;
+      color: #F58529;
+    }
+
+    .progress-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .progress-label {
+        margin-right: 10px;
+        min-width: 60px; /* Adjust as needed */
+        text-align: right;
+      }
+
+      .progress {
+        flex: 1;
+        height: 25px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        background-color: #FFD9A6;
+        border-radius: 5px;
+      }
+
+      .progress:hover {
+        flex: 1;
+        height: 25px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        background-color: #999999;
+        border-radius: 5px;
+      }
+
+      .progress-bar {
+        width: 0%;
+        height: 100%;
+        transition: width 0.6s ease;
+        background-color: #F58529;
+        border-radius: 5px;
+        animation: progress-animation 5s ease-in-out forwards;
+      }
+
+      .progress-bar:hover{
+        width: 0%;
+        height: 100%;
+        transition: width 0.6s ease;
+        background-color: black;
+        color: #F58529;
+        border-radius: 5px;
+        animation: progress-animation 5s ease-in-out forwards;
+      }
+
+      @keyframes progress-animation {
+        0% {
+          width: 0%;
+        }
+      }
+
+      b {
+        text-align: center ;
+        font-size: large;
+        color: black;
+      }
+
+      b:hover {
+        text-align: center ;
+        font-size: large;
+        color:#F58529
+      }
+
+      .javascriptSkill{
+        font-size: small;
+      }
+
+      .img{
+        border: 0.4rem dashed #F58529;
+        border-radius: 3rem;
+      }
+
+      .img:hover{
+        border: 0.4rem dashed black;
+        border-radius: 3rem;
+      }
+
+      .footer {
+        background-color: black;
+        border-top: 3px solid #F58529;
+        color: #F58529;
+        text-align: right;
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    .footerText{
+      color: #F58529;
+      margin: 0;
+    }
+
+    .nav-item{
+        margin: 0px;
+    }
+
+    .svg {
+        margin-right: 0.3rem;
+    }
+
+    .display-5{
+        font-size: 3rem;
+        font-weight: bold;
+        color: #F58529;
+        margin-top: 10rem;
+    }
+
+    .social{
+      width: 3rem;
+      height: 3rem;
+      border: none;
+    }
+
+    .social:hover {
+        width: 3.3rem;
+        height: 3.3rem;
+        border: none;
+    }
+
+    .profile{
+        border: 0.5rem dashed #F58529;
+        width: 24rem;
+        border-radius: 3rem;
+    }
+
+    .profile:hover{
+      border: 0.5rem dashed black;
+      width: 24rem;
+      border-radius: 3rem;
+    }
+
+    .getbtn{
+      background-color: #F58529;
+      border: none;
+      border-radius: 2rem;
+      color: black;
+    }
+
+    .getbtn:hover{
+      background-color: black;
+      border: none;
+      border-radius: 2rem;
+      color: #F58529;
+    }
+
+    #nav {
+        background-color: #F58529;
+    }
+
+    #navbar-example2 {
+        background-color: #F58529;
+      }
+
+    .btn-primar{
+    background-color: #F58529;
+    }
+
+    .btn-primar:hover{
+      background-color: black;
+      color: #F58529;
+      }
+
+    .footerText{
+      color: black;
+    }
+
+    .navBarItem{
+      color: #F58529;
+    }
+
+    .navBar{
+      border-bottom: 0.2rem solid #F58529;
+    }
+
+    .nav-link.rounded-pill {
+      border-radius: 50px; /* Adjust the value to control the pill shape */
+      padding: 10px 20px; /* Adjust padding as needed */
+      background-color: #F58529 !important; /* Specific background color */
+      color: #fff; /* Text color */
+    }
+
+    .nav-link.rounded-pill:hover {
+      background-color:#F58529 !important; /* Hover background color */
+      color: #fff; /* Hover text color */
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: #F58529 !important;
+      color: black;
+    }
+
+    .nav-link:hover {
+      color: #F58529 !important; /* Override default Bootstrap color */
+    }
+
+    /* Custom CSS for animation */
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .slide-in {
+      animation: slideInFromLeft 2s ease forwards;
+    }
+
+    @keyframes slideInFromTop {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .slide-down {
+      animation: slideInFromTop 2s ease forwards;
+    }
+
+    .text-container {
+      line-height: 1.5; /* Adjust this value as needed */
+    }
+
+    .h1 {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      font-size: 3rem;
+      color: #F58529;
+    }
+
+    .serviceBtn {
+      background-color: #F58529;
+      color: black;
+    }
+
+    .serviceBtn:hover {
+      background-color: black;
+      color: #F58529;
+    }
+
+    .resume {
+      background-color: #F58529;
+      border: none;
+      border-radius: 2rem;
+      color: black;
+    }
+
+    .resume:hover{
+      background-color: black;
+      border: none;
+      border-radius: 2rem;
+      color: #F58529;
+    }
+
+    .btn-download {
+    padding: 0;
+    }
+
+    .resume-link {
+      text-decoration: none;
+      background: none;
+      color: black;
+    }
+
+    .resume-link:hover {
+      text-decoration: none;
+      background: none;
+      color: #F58529;
+    }
+
+    a:hover{
+    color: #F58529;
+    }
+
+    .nav-link {
+      color: #F58529;/* Default text color */
+    position: relative; /* Positioning for pseudo-elements */
+    overflow: hidden; /* Ensure overflow is hidden */
+    text-decoration: none !important; /* Remove default underline */
+    transition: color 0.4s, background-color 0.4s; /* Smooth transition for text and background color */
+    }
+
+    .nav-link::before, .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.8s, opacity 0.4s;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left center;
+    background-color: #F58529; /* Background color of underline */
+    color: #F58529;
+    }
+
+    .nav-link::before {
+    transform-origin: right center;
+    }
+
+    .nav-link:hover::before, .nav-link:hover::after {
+    transform: scaleX(1); /* Scale up on hover */
+    opacity: 1; /* Show on hover */
+    }
+
+    .nav-link:hover {
+    color: black !important;/* Text color on hover */ 
+    }
+
+    .nav-link:hover::before {
+    transform-origin: left center; /* Expand from left on hover */
+    }
+
+    .nav-link:hover::after {
+    transform-origin: right center; /* Expand from right on hover */
+    }
+
+    .footer-link:hover{
+        color:#F58529;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .footer-link {
+      color: #F58529;
+      text-decoration: none;
+      margin: 0;
+    }
+
+    .bi-star-fill{
+      margin-right: 0.2rem;
+      color: #F58529;
+    }
+
+    .first{
+      margin-left: 0.2rem;
+    }
+
+    .bi-star{
+      color: #F58529;
+    }
+
+    .bi-star-half{
+      color: #F58529;
+    }
+
+    a.handles {
+      color: #fff;
+    }
+
+    a.handles:hover {
+      color:#fff;
+    }
+    .whatsapp {
+      background-color: rgb(0, 188, 0) !important;
+      border: none;
+    }
+
+    h1 {
+      color: #F58529;
+    }
+
+    .rating {
+    float: right;
+    }
+</style>
+
+
+
+
+
+  
+  <div class="fixed-top container-fluid slide-left"id="slidingDiv" >
+  <nav id="navbar" class="navbar fixed-top mb-3 navBar bg-dark">
+    <ul class="nav nav-pills ">
+      <li class="nav-item">
+        <a class="nav-link navBarItem rounded-5 active" href="#home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navBarItem rounded-5 " href="#project">Project</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navBarItem rounded-5" href="#skills">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navBarItem  rounded-5" href="#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navBarItem  rounded-5" href="#testimonial">Testimonials</a>
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+
+
+
+
+
+
+
+
+
+<div  class="container col-xxl-11 px-4 py-5" >
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+    <div class="col-10 col-sm-8 col-lg-6 slide-down" id="slidingDiv">
+      <img src="./Portfolio/WhatsApp Image .JPEG" class="d-block mx-lg-auto profile img-fluid" alt="Profile Image" width="700" height="500" loading="lazy">
+    </div>
+    <div id="home" id="slidingDiv" class="col-lg-6 bg-light p-4 slide-in">
+      <div class="text-container mb-3">
+        <span class="display-5 fw-bolder text-body-emphasis">Hey There, I'm</span>
+        <h1 class="h1"> Obi Promise 😉</h1>
+    </div>
+      <p class="lead">Enthusiastic and motivated secondary school student with a passion for leadership and community service. Career goals include pursuing higher education in Computer Science with a focus on Web Development, aiming to develop skills in front-end technologies.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex ">
+        <button type="button" class="btn btn-lg px-4 gap-3 getbtn">Get In Touch <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telephone-plus-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5"/>
+        </svg></button>
+        <a type="button" class="btn btn-outline-secondary btn-lg px-4 resume" href="../images/OBI PROMISE resume.pdf" download="Promise Obi Resume.pdf" class="btn btn-lg btn-download resume-link">Download My Resume <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-arrow-down-fill" viewBox="0 0 16 16">
+          <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m-1 4v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 11.293V7.5a.5.5 0 0 1 1 0"/>
+        </svg></a>
+      </div>
+    </div>
+      <div class="mt-5 ">
+
+        <button  type="button" class=" btn btn-primary social"><a class="handles" href="https://www.facebook.com/PromiseCodes?mibextid=ZbWKwL"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook " viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg></a></button>
+
+
+        <button type="button" class="btn btn-success social whatsapp" onclick="copyWhatsAppNumber()">
+          <a class="handles" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+              </svg>
+          </a>
+      </button>
+
+
+        <button type="button" class=" btn btn-primary social"><a class="handles" href="https://www.linkedin.com/in/promise-obi-506b65260/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+        </svg></a></button>
+
+
+        <button type="button" class=" btn btn-dark social"><a class="handles" href="https://x.com/obi_promiss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+        </svg></a></button>
+
+
+        <button type="button" class="instagram-button btn btn-danger social"><a class="handles"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg></a></button>
+    </div>
+    
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+        
+    
+      <div id="project" class="container  py-5 mt-3" >
+     <h1  class="mb-5 border-bottom">My Projects</h1>
+         
+         
+
+        <div  class="row g-0  position-relative ">
+          <div class="col-md-6 mb-md-0 p-md-4 container">
+          <img src="./Portfolio/hotel.JPEG" class="w-100 img" alt="hotel">
+          </div>
+
+          <div  class="col-md-6 p-4 ps-md-0">
+            <p> I crafted a hotel website with luxurious accommodations, seamless booking options, and a user-friendly design that highlights the hospitality experience.</p>
+            <a class="projectLink projectBtn" href="../sites/Promise Hotel/index.html"  class="stretched-link"> Check It Out</a>
+          </div>
+        </div>
+        
+
+        <div  class="row g-0  position-relative ">
+          <div class="col-md-6 mb-md-0 p-md-4 container">
+            <img src="./Portfolio/restaurant.JPEG" class="w-100 img" alt="restaurant">
+          </div>
+
+          <div class="col-md-6 p-4 ps-md-0">
+            <p class="mt-0">I created a restaurant website featuring enticing menus, seamless online ordering, and a user-friendly design that highlights the dining experience.</p>
+            <a class="projectLink projectBtn" href="../sites/Mama bobo cuisines/index 19.04.18.html" class="stretched-link">Check It Out</a>
+          </div>
+          </div>
+          </div>
+        
+        
+        
+
+         
+
+
+
+
+        <div class="container  py-5 my-5 " id="skills">
+          <h1 class="mb-5 border-bottom">Skills</h1>
+
+
+          <div class="row g-4 py-3 row-cols-1 row-cols-lg-2 row-cols-md-2">
+            <div class="col d-flex align-items-start">
+              <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                  <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="fs-2 text-body-emphasis">HTML</h3>
+                <p>HTML structures web content using tags to define elements like text, images, and links, forming the basic layout of a webpage.</p>
+                <a href="https://www.w3schools.com/css/default.asp" class="btn btn-primar">
+                  Learn more
+                </a>
+              </div>
+            </div>
+        
+            <div class="col d-flex align-items-start">
+              <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="svg bi bi-braces" viewBox="0 0 16 16">
+                  <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="fs-2 text-body-emphasis">CSS</h3>
+                <p>CSS styles HTML elements, controlling their appearance with properties like colors, fonts, spacing, and layout to create visually appealing web pages.</p>
+                <a href="https://www.w3schools.com/css/default.asp" class="btn btn-primar">
+                  Learn more
+                </a>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <div class="icon-square text-body-emphasis  d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="svg bi bi-filetype-js" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H8v-1h4a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.186 15.29a1.2 1.2 0 0 1-.111-.449h.765a.58.58 0 0 0 .255.384q.105.073.249.114.143.041.319.041.246 0 .413-.07a.56.56 0 0 0 .255-.193.5.5 0 0 0 .085-.29.39.39 0 0 0-.153-.326q-.151-.12-.462-.193l-.619-.143a1.7 1.7 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.1 1.1 0 0 1-.123-.524q0-.366.19-.639.19-.272.528-.422.336-.15.776-.149.457 0 .78.152.324.153.5.41.18.255.2.566h-.75a.56.56 0 0 0-.12-.258.6.6 0 0 0-.247-.181.9.9 0 0 0-.369-.068q-.325 0-.513.152a.47.47 0 0 0-.184.384q0 .18.143.3a1 1 0 0 0 .405.175l.62.143q.327.075.566.211.24.136.375.358t.135.56q0 .37-.188.656a1.2 1.2 0 0 1-.539.439q-.351.158-.858.158-.381 0-.665-.09a1.4 1.4 0 0 1-.478-.252 1.1 1.1 0 0 1-.29-.375m-3.104-.033A1.3 1.3 0 0 1 0 14.791h.765a.6.6 0 0 0 .073.27.5.5 0 0 0 .454.246q.285 0 .422-.164.138-.165.138-.466v-2.745h.79v2.725q0 .66-.357 1.005-.354.345-.984.345a1.6 1.6 0 0 1-.569-.094 1.15 1.15 0 0 1-.407-.266 1.1 1.1 0 0 1-.243-.39"/>
+                </svg>
+               </div>
+              <div>
+                <h3 class="fs-2 text-body-emphasis">JavaScript</h3>
+                <p>JavaScript adds interactivity to web pages, enabling dynamic features such as animations, form validations, and content updates without refreshing the page.</p>
+                <a href="https://www.w3schools.com/js/default.asp" class="btn btn-primar">
+                  Learn more
+                </a>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <div class="icon-square text-body-emphasis  d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class=" svgbi bi-bootstrap" viewBox="0 0 16 16">
+                  <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z"/>
+                  <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z"/>
+                </svg>           
+               </div>
+              <div>
+                <h3 class="fs-2 text-body-emphasis">Bootstrap</h3>
+                <p>Bootstrap is a framework with ready-to-use templates and components for building responsive websites quickly and consistently.</p>
+                <a href="https://www.w3schools.com/bootstrap5/index.php" class="btn btn-primar">
+                  Learn more
+                </a>
+              </div>
+            </div>
+          </div>
+        
+        
+        
+        <div class="container mt-5">
+
+          <div class="progress-wrapper mb-4">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" style="width: 90%;" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><b>HTML</b>
+              </div>
+            </div>
+           </div>
+      
+          <div class="progress-wrapper mb-4">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" style="width: 85%;" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><b>CSS</b></div>
+            </div>
+          </div>
+
+      
+          <div class="progress-wrapper mb-4">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" style="width: 25%;" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b class="javascriptSkill">JavaScript</b></div>
+            </div>
+          </div>
+      
+
+          <div class="progress-wrapper">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" style="width: 80%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><b>Bootstrap</b></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+<div id="services" class="container car mt-5">
+  <h1 class="mb-5 border-bottom">Our Services</h1>
+  <p class="mb-4 lead">I specialize in crafting personalized websites that are not just visually stunning but also perfectly aligned with your unique goals. Whether you're launching a startup, showcasing a portfolio, or running an online store, our team is committed to delivering tailored solutions that ensure your digital presence stands out.</p>
+  <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-pause="false">
+    <div class="carousel-inner rounded-5 img">
+      <div class="carousel-indicators">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5" class="active" aria-current="true"></button>
+        </div>
+      </div>
+      <div class="carousel-item active ">
+        <img src="./Portfolio/estate.AVIF" class="d-block w-100" alt="Real Estate Website">
+      </div>
+      <div class="carousel-item">
+        <img src="./Portfolio/portfolio.PNG" class="d-block w-100" alt="Portfolio Website">
+      </div>
+      <div class="carousel-item">
+        <img src="./Portfolio/pets.JPEG" class="d-block w-100" alt="Pet Adoption Website">
+      </div>
+      <div class="carousel-item">
+        <img src="./Portfolio/travel.JPEG" class="d-block w-100" alt="Travel Website">
+      </div>
+      <div class="carousel-item">
+        <img src="./Portfolio/learning.JPEG" class="d-block w-100" alt="Learning Website">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+
+    <div class="d-grid mt-4 ">
+      <p class="lead">
+        Good websites are often created, yet I excel in crafting them to a higher standard, ensuring exceptional quality, functionality, and user experience. 😇
+      </p>
+
+      <button class="btn serviceBtn" type="button">Create My Website</button>
+    </div>
+  </div>
+
+            
+  
+
+
+  
+
+
+
+        <div class="container  py-5 my-5" id="testimonial">
+          <h1 class="mb-5 border-bottom">Testimonials</h1>
+           
+           
+
+          <p class="lead">Passionate about web development, a dedicated professional committed to creating innovative and user-centric websites. With a keen eye for design, I specialize in crafting seamless online experiences that resonate with users. My approach combines creativity with technical expertise, ensuring each project meets the highest standards of functionality and aesthetics. <b class="fw-bold"> But don't just take my word for it, here's what others have said ;</b> </p>
+
+  <div class="card-group ">
+    <div class="card imgg">
+      <img src="./Portfolio/daniel richards.JPEG" class="card-img-top img" alt="man">
+      <div class="card-body bg-body-tertiary">
+        <h5 class="card-title">Daniel Richads</h5>
+        <p class="card-text">Working with Promise was great! They created a stunning website with easy navigation and attention to detail. Communication was smooth, and they quickly made any changes we needed. Highly recommend for anyone needing a creative frontend developer.</p>
+        <span class="card-text"><small class="text-body-secondary">Partner </small><span class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill first" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></span></span>
+      </div>
+    </div>
+
+    <div class="card imgg">
+      <img src="./Portfolio/paige martin.JPEG" class="card-img-top img" alt="woman">
+      <div class="card-body bg-body-tertiary">
+        <h5 class="card-title">Paige Martin</h5>
+        <p class="card-text">I hired Promise to update our website's frontend, and he did an amazing job. He made it modern and fast, with a great design sense. If you need a frontend developer who knows their stuff, Promise is the man for the job.</p>
+        <span class="card-text"><small class="text-body-secondary">Client </small><span class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill first" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
+          <path d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"/>
+        </svg></span></span>
+      </div>
+    </div>
+
+    <div class="card imgg">
+      <img src="./Portfolio/singh khan.JPEG" class="card-img-top img" alt="man">
+      <div class="card-body bg-body-tertiary">
+        <h5 class="card-title">Singh Khan</h5>
+        <p class="card-text">Working with Promise was great! He created a stunning website with easy navigation and attention to detail. Communication was smooth, and they quickly made any changes we needed. Highly recommend for anyone needing a creative frontend developer.</p>
+        <span class="card-text"><small class="text-body-secondary">Partner </small><span class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill first" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+        </svg></span></span>
+      </div>
+    </div>
+  </div>
+        </div>
+  
+
+
+
+
+
+  <div class="">
+    <footer class="d-flex flex-wrap justify-content-end mt-5 footer p-3">  
+      <ul class="nav col-lg-12 col-md-12 justify-content-end">
+      <li><a href="#" class="footer-link">divinepromise14@gmail.com</a></li> 
+      </ul>
+    </footer>
+  </div>
+
+  <script>
+    function copyWhatsAppNumber() {
+        // Replace with the actual WhatsApp number or text you want to copy
+        var whatsappNumber = "+234 701 885 6687";
+        
+        // Create a temporary textarea element to hold the text to be copied
+        var textarea = document.createElement('textarea');
+        textarea.textContent = whatsappNumber;
+        textarea.style.position = 'fixed';  // Prevent scrolling to bottom when focusing
+        document.body.appendChild(textarea);
+        
+        // Select the text in the textarea
+        textarea.select();
+        
+        // Copy to clipboard
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'Copied!' : 'Unable to copy';
+            console.log('Whatsapp number was ' + msg);
+            if (successful) {
+                window.alert('WhatsApp number copied to clipboard, kindly send a DM to this number: ' + whatsappNumber)  ;
+            }
+        } catch (err) {
+            console.error('Unable to copy');
+        }
+        
+        // Clean up - remove the temporary textarea
+        document.body.removeChild(textarea);
+    }
+    </script>
+    
+</body>
+</html>
