@@ -1,0 +1,109 @@
+.gradient {
+    background: linear-gradient(135deg, #2196F3,#4CAF50, #FFFF00);
+    background-size: 600% 600%;
+    animation: gradientBG 30s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.webs {
+    border-radius: 1rem;
+}
+svg {
+    margin-bottom: 0.3rem;
+    margin-right: 0.4rem;
+}
+
+
+.int 
+
+
+text {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.car {
+    height: 400px;
+}
+
+.head {
+    font-family: serif;
+    letter-spacing: 0.35rem;
+    font-weight: bolder;
+}
+
+.fb {
+    color: #2196F3;
+}
+
+text {
+    font-weight: bolder;
+    font-size: x-large;
+    text-align: center;
+    margin-left: 1rem;
+}
+
+iii {
+   
+}
+
+.snap {
+    color: #FFFF00;
+}
+
+.full-page-height {
+    min-height: 50vh; 
+    margin-top: 5rem;
+    font-size: 1.7rem;
+
+  }
+
+  .kk {
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+  }
+
+  .ll {
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border: none;
+    padding-left: 2rem;
+  }
+
+  .twit {
+         color: black;
+  }
+
+  .gram {
+         color: rgb(255, 0, 149);
+  }
+
+  .sapp{
+    color: rgb(1, 255, 1);
+  }
+
+  .ks{
+    color: blue;
+  }

@@ -1,0 +1,88 @@
+.gradient {
+    background: linear-gradient(135deg, #006400,#6A0DAD,#FFD700);
+    background-size: cover;
+    animation: gradientBG 30s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.imm {
+    border: none;
+    border-radius: 1rem;
+}
+a {
+    color: black;
+}
+.im {
+width:3rem ;
+height: 2rem ;
+}
+
+svg {
+    margin: 0.09rem;
+}
+
+#span {
+    color: white;
+}
+
+.dropdown-toggle {
+    color: white;
+}
+
+text {
+    font-weight: bolder;
+    font-size: large;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.hy{
+    color: white;
+}
+.fuss {
+    float: none;
+}
+
+.fll {
+    height: 100%
+}
+
+
+.bb {
+  opacity: 50%;
+}
+
+.vv {
+    float: right;
+}
+
+.bm{
+    border-top: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+
+}
+
+.jk {
+    font-family: serif;
+    letter-spacing: 0.4rem;
+}
+
+.kk {
+    padding-bottom: 0.1rem;
+    padding-right: 0.1rem;
+}
+
+.mmm {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
